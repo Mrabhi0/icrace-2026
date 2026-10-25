@@ -1,0 +1,12 @@
+[build]
+  command = "npx prisma generate && npx next build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXTAUTH_SECRET = "conference-portal-prototype-secret-key-change-in-production-2026"
+
+[functions]
+  node_bundler = "esbuild"
